@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>533</width>
+    <height>367</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agregar Cliente</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>531</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>451</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 17pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>INGRESA UN NUEVO CLIENTE</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastNameTextField">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Nombre</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>290</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #f39c12; /* Color de fondo del botón (naranja) */
+    color: black; /* Color del texto del botón */
+    border: 1px solid #d35400; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
+font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: #f1c40f; /* Color de fondo al pasar el ratón (amarillo) */
+    border: 1px solid #c27c00; /* Borde al pasar el ratón */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Cancelar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>290</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #f39c12; /* Color de fondo del botón (naranja) */
+    color: black; /* Color del texto del botón */
+    border: 1px solid #d35400; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
+   font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: #f1c40f; /* Color de fondo al pasar el ratón (amarillo) */
+    border: 1px solid #c27c00; /* Borde al pasar el ratón */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Guardar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>320</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="logomc.qrc">:/cct/logopng.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Apellido</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastNameTextField_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Telefono</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastNameTextField_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastNameTextField_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Direccion</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastNameTextField_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>230</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="logomc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
