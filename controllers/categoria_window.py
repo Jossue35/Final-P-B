@@ -68,7 +68,7 @@ class CategoriaWindow(QMainWindow):
         categoria_id = self.tableWidget.item(row, 0).text()
 
        
-        reply = QMessageBox.question(self, 'Eliminar Estudiante', 'Vas eliminar la categoria, Estas seguro?',
+        reply = QMessageBox.question(self, 'Eliminar Categoria', 'Vas eliminar la categoria, Estas seguro?',
                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:

@@ -6,10 +6,9 @@ from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap, QIcon
 from models.db_conector import DatabaseConnection
 
-from models.categoria_model import CategoriaModel
-from controllers.categoria_form import CategoriaForm
-from controllers.categoria_window import CategoriaWindow
 
+from controllers.categoria_window import CategoriaWindow
+from controllers.producto_window import ProductoWindow
 
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
@@ -31,7 +30,15 @@ class MainWindow(QMainWindow):
         self.categoria_window = CategoriaWindow()
         self.pushButton.clicked.connect(self.abrir_ventana_categoria)
 
+        self.producto_window = ProductoWindow()
+        self.pushButton_3.clicked.connect(self.abrir_ventana_producto)
+
     def abrir_ventana_categoria(self):
         self.categoria_window.load_categoria()
         self.categoria_window.show()
+        self.close()
+
+    def abrir_ventana_producto(self):
+        self.producto_window.load_producto()
+        self.producto_window.show()
         self.close()
