@@ -23,7 +23,7 @@ class DatabaseConnection:
     
     @property
     def connection(self):
-        return self._instance._cur
+        return self._instance._conn
     
     def close(self):
         self._cur.close()
