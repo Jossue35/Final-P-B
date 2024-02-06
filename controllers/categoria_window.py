@@ -84,7 +84,6 @@ class CategoriaWindow(QMainWindow):
         self._new_categoria.reset_form()
         self._new_categoria.show()
     
-
     def closeEvent(self, ev) -> None:
         self._categoria_model.close()
         return super().closeEvent(ev)
