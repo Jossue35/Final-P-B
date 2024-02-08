@@ -1,11 +1,11 @@
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
+from PyQt5.QtCore import  QSize
+from PyQt5.QtWidgets import QMainWindow,  QTableWidgetItem, QMessageBox, QPushButton,  QLabel
 from PyQt5 import uic
 import pathlib
 from models.categoria_model import CategoriaModel
 from controllers.categoria_form import CategoriaForm
-from PyQt5.QtGui import QCloseEvent, QPixmap, QIcon
-
+from PyQt5.QtGui import  QPixmap, QIcon
+from models.db_conector import DatabaseConnection
 
 class CategoriaWindow(QMainWindow):
     def __init__(self):
@@ -48,7 +48,7 @@ class CategoriaWindow(QMainWindow):
             self.tableWidget.setCellWidget(i, 2, edit_button)
 
             delete_button = QPushButton()
-            delete_button.setIcon(QIcon("controllers/xicone-black"))  # Reemplaza "ruta_del_icono_eliminar.png" por la ruta de tu icono de eliminación
+            delete_button.setIcon(QIcon("controllers/xicone-black"))  
             delete_button.setStyleSheet("background-color: transparent; border: none;")
             delete_button.setIconSize(QSize(20, 20))
             delete_button.clicked.connect(self.delete_categoria)
@@ -68,7 +68,7 @@ class CategoriaWindow(QMainWindow):
         categoria_id = self.tableWidget.item(row, 0).text()
 
        
-        reply = QMessageBox.question(self, 'Eliminar Estudiante', 'Vas eliminar la categoria, Estas seguro?',
+        reply = QMessageBox.question(self, 'Eliminar Categoria', 'Vas eliminar la categoria, Estas seguro?',
                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:
@@ -84,7 +84,7 @@ class CategoriaWindow(QMainWindow):
         self._new_categoria.reset_form()
         self._new_categoria.show()
     
-
     def closeEvent(self, ev) -> None:
-        self._categoria_model.close()
+        db = DatabaseConnection()
+        db.close()
         return super().closeEvent(ev)

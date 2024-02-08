@@ -1,11 +1,11 @@
-#from models.db_conector import DatabaseConnection
-import psycopg2
+from models.db_conector import DatabaseConnection
+
 
 class CategoriaModel:
     def __init__(self) -> None:
-        #db = DatabaseConnection()
-        self._conn = psycopg2.connect("dbname=proyecto_final user=postgres password=1234 host=localhost")
-        self._cur = self._conn.cursor()
+        db = DatabaseConnection()
+        self._conn = db.connection
+        self._cur = db.cursor
 
     def get_categoria(self):
         query = "SELECT * FROM categoria"

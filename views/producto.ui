@@ -33,7 +33,7 @@
     <item>
      <widget class="QFrame" name="frame">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);
+       <string notr="true">background-color:white;
 
 
 
@@ -48,9 +48,9 @@
       <widget class="QTableWidget" name="tableWidget">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>130</x>
          <y>220</y>
-         <width>601</width>
+         <width>701</width>
          <height>301</height>
         </rect>
        </property>
@@ -95,6 +95,18 @@ QTableWidget:item:selected {
        <column>
         <property name="text">
          <string>Nombre</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Categoria</string>
         </property>
         <property name="font">
          <font>
@@ -192,7 +204,7 @@ QTableWidget:item:selected {
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 17pt &quot;Arial Black&quot;;
-color: white;</string>
+color: black;</string>
        </property>
        <property name="text">
         <string>PRODUCTOS MCDONALS</string>
@@ -215,13 +227,18 @@ color: white;</string>
     <property name="title">
      <string>Archivo</string>
     </property>
+    <addaction name="nuevoProductoAction"/>
    </widget>
    <addaction name="menuArchivo"/>
   </widget>
+  <action name="nuevoProductoAction">
+   <property name="text">
+    <string>Nuevo Producto</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="logomc.qrc"/>
-  <include location="../../../../../Program Files (x86)/Qt Designer/logomc.qrc"/>
  </resources>
  <connections/>
 </ui>
