@@ -1,10 +1,10 @@
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
+from PyQt5.QtCore import QSize
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox, QPushButton,  QLabel
 from PyQt5 import uic
 import pathlib
 from models.cliente_model import ClienteModel
 from controllers.cliente_form import ClienteForm
-from PyQt5.QtGui import QCloseEvent, QPixmap, QIcon
+from PyQt5.QtGui import  QPixmap, QIcon
 
 class ClienteWindow(QMainWindow):
     def __init__(self):

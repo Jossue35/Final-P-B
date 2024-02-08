@@ -1,14 +1,10 @@
-from PyQt5.QtWidgets import QDialog, QDateEdit, QTableWidgetItem, QTableWidget,QMainWindow, QLabel, QTableWidgetItem, QComboBox, QTextEdit, QLineEdit
+from PyQt5.QtWidgets import QDialog, QDateEdit, QTableWidgetItem, QTableWidget, QLabel,  QComboBox,  QLineEdit, QPushButton
 from PyQt5.QtGui import QDoubleValidator
-from models import compras_model
 from models.compras_model import CompraModel
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
 from PyQt5 import uic
 import pathlib
-from models.categoria_model import CategoriaModel
-from controllers.categoria_form import CategoriaForm
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 
 class ComprasWindow(QDialog):
 
@@ -21,6 +17,18 @@ class ComprasWindow(QDialog):
         botonCompra = self.findChild(QPushButton, 'botonCompra')
         botonCompra.clicked.connect(self.realizar_compra)
         
+        #ICONOS
+        pixmap = QPixmap('logopng.png')
+        pixmap = pixmap.scaledToWidth(231)  # Ajustar el ancho
+        pixmap = pixmap.scaledToHeight(141)  # Ajustar la altura
+
+        label = QLabel(self)
+        label.setPixmap(pixmap)
+        label.setGeometry(390, 20, 231, 141)  # Establecer las dimensiones principal
+
+        icon_path = "controllers/logopng.png"  # Reemplaza con la ruta real de tu icono
+        self.setWindowIcon(QIcon(icon_path))
+
     def load_usuarios(self):
         usuarios = self._compras_model.get_usuario()
         print(usuarios)
@@ -66,7 +74,7 @@ class ComprasWindow(QDialog):
             except ValueError as e:
                 print(f"Error processing row {row + 1}: {e}")
 
-        total_label.setText("Total: {:.2f}".format(total_value))
+        total_label.setText(": {:.2f}".format(total_value))
         print(f"Compra realizada por: {selected_user_info} (ID: {selected_user_id}) en la fecha: {selected_date}")
         print("Productos:")
         for product_info in product_info_list:

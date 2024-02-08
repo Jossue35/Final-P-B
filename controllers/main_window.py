@@ -1,12 +1,10 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QWidget,QTableWidgetItem,QMessageBox, QPushButton, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QLabel
 from PyQt5 import uic
 import pathlib
-from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap, QIcon
-from models.db_conector import DatabaseConnection
 
-from controllers.cliente_form import ClienteForm
+
 from controllers.cliente_window import ClienteWindow
 from controllers.categoria_window import CategoriaWindow
 from controllers.producto_window import ProductoWindow

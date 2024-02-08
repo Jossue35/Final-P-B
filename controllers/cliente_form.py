@@ -1,10 +1,10 @@
 import typing
 import pathlib
 from PyQt5.QtWidgets import QWidget, QLabel
-from PyQt5 import QtCore, uic
-from PyQt5.QtCore import Qt, pyqtSignal
+from PyQt5 import  uic
+from PyQt5.QtCore import  pyqtSignal
 from models.cliente_model import ClienteModel
-from PyQt5.QtGui import QCloseEvent, QPixmap, QIcon
+from PyQt5.QtGui import  QPixmap, QIcon
 
 class ClienteForm(QWidget):
     cliente_saved = pyqtSignal()

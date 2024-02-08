@@ -1,10 +1,10 @@
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
+from PyQt5.QtCore import  QSize
+from PyQt5.QtWidgets import QMainWindow,  QTableWidgetItem, QMessageBox, QPushButton,  QLabel
 from PyQt5 import uic
 import pathlib
 from models.categoria_model import CategoriaModel
 from controllers.categoria_form import CategoriaForm
-from PyQt5.QtGui import QCloseEvent, QPixmap, QIcon
+from PyQt5.QtGui import  QPixmap, QIcon
 
 
 class CategoriaWindow(QMainWindow):
