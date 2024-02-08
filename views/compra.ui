@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>978</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>801</width>
-      <height>571</height>
+      <width>981</width>
+      <height>731</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -32,8 +35,8 @@
     <widget class="QTableWidget" name="tblcompra">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>140</y>
+       <x>170</x>
+       <y>280</y>
        <width>631</width>
        <height>391</height>
       </rect>
@@ -60,22 +63,26 @@ QTableWidget:item:selected {
      </property>
      <column>
       <property name="text">
-       <string>Id compra</string>
+       <string>Id</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
         <underline>false</underline>
        </font>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>fecha compra</string>
+       <string>Fecha</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
      </column>
@@ -85,18 +92,22 @@ QTableWidget:item:selected {
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
         <kerning>true</kerning>
        </font>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>nombre producto</string>
+       <string>Producto</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
      </column>
@@ -104,45 +115,129 @@ QTableWidget:item:selected {
       <property name="text">
        <string>precio total producto</string>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
      </column>
     </widget>
     <widget class="QPushButton" name="buscar">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>40</y>
-       <width>93</width>
-       <height>28</height>
+       <x>330</x>
+       <y>220</y>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #f39c12; /* Color de fondo del botón (naranja) */
+    color: white; /* Color del texto del botón */
+    border: 1px solid #d35400; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
+}
+
+QPushButton:hover {
+    background-color: #f1c40f; /* Color de fondo al pasar el ratón (amarillo) */
+    border: 1px solid #c27c00; /* Borde al pasar el ratón */
+}
+</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>BUSCAR</string>
      </property>
     </widget>
     <widget class="QComboBox" name="cbxId">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>40</y>
-       <width>91</width>
-       <height>22</height>
+       <x>540</x>
+       <y>220</y>
+       <width>121</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+    background: #FDF3E7; /* Color de fondo naranja claro */
+    selection-background-color: darkorange; /* Color de fondo al seleccionar */
+    color: darkorange; /* Color del texto */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: darkorange; /* Color de la flecha */
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png); /* Puedes personalizar la flecha si lo deseas */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>170</y>
+       <width>381</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 87 20pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>BUSCAR COMPRA</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>50</y>
+       <width>231</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>231</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/cct/584298b4a6515b1e0ad75adb.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="logomc.qrc">:/cct/logopng.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="logomc.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,14 +1,11 @@
-from PyQt5.QtWidgets import  QTableWidgetItem, QTableWidget,QMainWindow, QLabel, QTableWidgetItem, QComboBox
-from PyQt5.QtGui import QIntValidator
-from models import compras_model
-from models.compras_model import CompraModel
+from PyQt5.QtWidgets import  QTableWidgetItem, QMainWindow, QLabel, QTableWidgetItem, QComboBox
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
+from PyQt5.QtWidgets import QMainWindow,  QTableWidgetItem,  QPushButton
 from PyQt5 import uic
 import pathlib
 from models.listado_compras_model import ListadoCompraModel
 from controllers.categoria_form import CategoriaForm
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 
 class ListadoCompraWindow(QMainWindow):
     def __init__(self):
@@ -16,6 +13,17 @@ class ListadoCompraWindow(QMainWindow):
         self._listado_compra_model = ListadoCompraModel()
         mod_path = pathlib.Path(__file__).parent.parent
         uic.loadUi(mod_path / "views/compra.ui", self)
+
+        pixmap = QPixmap('logopng.png')
+        pixmap = pixmap.scaledToWidth(231)  # Ajustar el ancho
+        pixmap = pixmap.scaledToHeight(141)  # Ajustar la altura
+
+        label = QLabel(self)
+        label.setPixmap(pixmap)
+        label.setGeometry(410, 40, 231, 141)  # Establecer las dimensiones principal
+
+        icon_path = "controllers/logopng.png"  # Reemplaza con la ruta real de tu icono
+        self.setWindowIcon(QIcon(icon_path))
 
         botonCompra = self.findChild(QPushButton, 'buscar')
         botonCompra.clicked.connect(self.busqueda_compra)
