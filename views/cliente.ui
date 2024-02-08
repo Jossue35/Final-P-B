@@ -33,7 +33,7 @@
     <item>
      <widget class="QFrame" name="frame">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 0, 0);
+       <string notr="true">background-color: white;
 
 
 
@@ -48,9 +48,9 @@
       <widget class="QTableWidget" name="tableWidget">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>10</x>
          <y>230</y>
-         <width>801</width>
+         <width>901</width>
          <height>301</height>
         </rect>
        </property>
@@ -94,6 +94,18 @@ QTableWidget:item:selected {
        </column>
        <column>
         <property name="text">
+         <string>Cedula</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>Nombre</string>
         </property>
         <property name="font">
@@ -118,6 +130,18 @@ QTableWidget:item:selected {
        </column>
        <column>
         <property name="text">
+         <string>Email</string>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>Telefono</string>
         </property>
         <property name="font">
@@ -131,18 +155,6 @@ QTableWidget:item:selected {
        <column>
         <property name="text">
          <string>Direccion</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Email</string>
         </property>
         <property name="font">
          <font>
@@ -199,7 +211,7 @@ QTableWidget:item:selected {
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="logomc.qrc">:/cct/logopng.png</pixmap>
+        <pixmap resource="../../../Final-P-B/views/logomc.qrc">:/cct/logopng.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -216,7 +228,7 @@ QTableWidget:item:selected {
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 17pt &quot;Arial Black&quot;;
-color: white;</string>
+color: black;</string>
        </property>
        <property name="text">
         <string>CLIENTES MCDONALS</string>
@@ -239,13 +251,18 @@ color: white;</string>
     <property name="title">
      <string>Archivo</string>
     </property>
+    <addaction name="nuevoClienteAction"/>
    </widget>
    <addaction name="menuArchivo"/>
   </widget>
+  <action name="nuevoClienteAction">
+   <property name="text">
+    <string>Agregar Cliente</string>
+   </property>
+  </action>
  </widget>
  <resources>
-  <include location="logomc.qrc"/>
-  <include location="../../../../../Program Files (x86)/Qt Designer/logomc.qrc"/>
+  <include location="../../../Final-P-B/views/logomc.qrc"/>
  </resources>
  <connections/>
 </ui>

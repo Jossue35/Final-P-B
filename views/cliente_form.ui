@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
-    <height>367</height>
+    <width>875</width>
+    <height>409</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>531</width>
-     <height>371</height>
+     <width>961</width>
+     <height>441</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -34,8 +34,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>10</y>
+      <x>240</x>
+      <y>20</y>
       <width>451</width>
       <height>51</height>
      </rect>
@@ -48,13 +48,13 @@ color: black;</string>
      <string>INGRESA UN NUEVO CLIENTE</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lastNameTextField">
+   <widget class="QLineEdit" name="nombreTextField">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>70</y>
+      <x>550</x>
+      <y>110</y>
       <width>241</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -79,9 +79,9 @@ QLineEdit:focus {
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>111</width>
+      <x>440</x>
+      <y>120</y>
+      <width>91</width>
       <height>18</height>
      </rect>
     </property>
@@ -96,10 +96,10 @@ color: black;</string>
    <widget class="QPushButton" name="cancelButton">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>290</y>
-      <width>141</width>
-      <height>31</height>
+      <x>470</x>
+      <y>340</y>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -125,10 +125,10 @@ QPushButton:hover {
    <widget class="QPushButton" name="saveButton">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>290</y>
-      <width>151</width>
-      <height>31</height>
+      <x>210</x>
+      <y>340</y>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -154,8 +154,8 @@ QPushButton:hover {
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>320</y>
+      <x>790</x>
+      <y>360</y>
       <width>81</width>
       <height>41</height>
      </rect>
@@ -164,7 +164,7 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="logomc.qrc">:/cct/logopng.png</pixmap>
+     <pixmap resource="../../../Final-P-B/views/logomc.qrc">:/cct/logopng.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -174,9 +174,9 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>110</y>
+      <y>170</y>
       <width>111</width>
-      <height>18</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -187,13 +187,13 @@ color: black;</string>
      <string>Apellido</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lastNameTextField_2">
+   <widget class="QLineEdit" name="apellidoTextField">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>110</y>
+      <x>110</x>
+      <y>170</y>
       <width>241</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -219,7 +219,7 @@ QLineEdit:focus {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>250</y>
       <width>111</width>
       <height>18</height>
      </rect>
@@ -232,13 +232,13 @@ color: black;</string>
      <string>Telefono</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lastNameTextField_3">
+   <widget class="QLineEdit" name="correoTextField">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>150</y>
+      <x>550</x>
+      <y>170</y>
       <width>241</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -263,9 +263,9 @@ QLineEdit:focus {
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>190</y>
-      <width>111</width>
+      <x>440</x>
+      <y>180</y>
+      <width>101</width>
       <height>18</height>
      </rect>
     </property>
@@ -277,13 +277,13 @@ color: black;</string>
      <string>Email</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lastNameTextField_4">
+   <widget class="QLineEdit" name="telefonoTextField">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>190</y>
+      <x>110</x>
+      <y>240</y>
       <width>241</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -308,8 +308,8 @@ QLineEdit:focus {
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>230</y>
+      <x>430</x>
+      <y>250</y>
       <width>111</width>
       <height>18</height>
      </rect>
@@ -322,13 +322,58 @@ color: black;</string>
      <string>Direccion</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lastNameTextField_5">
+   <widget class="QLineEdit" name="direccionTextField">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>230</y>
+      <x>550</x>
+      <y>240</y>
       <width>241</width>
-      <height>20</height>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #fef9e7; /* Color de fondo del QLineEdit (amarillo claro) */
+    border: 1px solid #f39c12; /* Borde del QLineEdit (naranja) */
+    border-radius: 5px; /* Bordes redondeados del QLineEdit */
+    padding: 5px; /* Espaciado interno del QLineEdit */
+}
+
+QLineEdit:hover {
+    background-color: #fff3cd; /* Color de fondo al pasar el ratón (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al pasar el ratón (amarillo) */
+}
+
+QLineEdit:focus {
+    background-color: #fff3cd; /* Color de fondo al tener el foco (amarillo más claro) */
+    border: 1px solid #f1c40f; /* Borde al tener el foc
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>111</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 14pt &quot;Arial Black&quot;;
+color: black;</string>
+    </property>
+    <property name="text">
+     <string>Cedula</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cedulaTextField">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>241</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -353,7 +398,7 @@ QLineEdit:focus {
   </widget>
  </widget>
  <resources>
-  <include location="logomc.qrc"/>
+  <include location="../../../Final-P-B/views/logomc.qrc"/>
  </resources>
  <connections/>
 </ui>

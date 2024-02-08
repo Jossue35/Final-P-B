@@ -7,8 +7,10 @@ class ProductoModel:
         self._cur  = db.cursor
 
     def get_producto(self):
-        query = "SELECT id_producto, nombre_producto, nombre_categoria, precio, cantidad \
-              FROM producto, categoria WHERE id_categoria1 = id_categoria"
+        query = "SELECT p.id_producto, p.nombre_producto,  c.nombre_categoria, p.precio, p.cantidad \
+                FROM producto p \
+                INNER JOIN producto_categoria pc ON p.id_producto = pc.id_producto_fk \
+                INNER JOIN categoria c ON pc.id_categoria_fk = c.id_categoria;"
         self._cur.execute(query)
         return self._cur.fetchall()
     
@@ -20,7 +22,7 @@ class ProductoModel:
 
     def get_producto_by_id(self, producto_id):
         try:
-            query = 'SELECT * FROM producto WHERE id_producto = %s'
+            query = "SELECT * FROM producto WHERE id_producto = %s"
             self._cur.execute(query,(producto_id,))
             return self._cur.fetchone()
         except Exception as e:

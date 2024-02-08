@@ -1,10 +1,10 @@
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtWidgets import QMainWindow, QWidget, QTableWidgetItem, QMessageBox, QPushButton, QVBoxLayout, QLabel
+from PyQt5.QtCore import  QSize
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox, QPushButton,  QLabel
 from PyQt5 import uic
 import pathlib
 from models.producto_model import ProductoModel
 from controllers.producto_form import ProductoForm
-from PyQt5.QtGui import QCloseEvent, QPixmap, QIcon
+from PyQt5.QtGui import  QPixmap, QIcon
 
 class ProductoWindow(QMainWindow):
     def __init__(self):
@@ -69,7 +69,7 @@ class ProductoWindow(QMainWindow):
         row = sender.property("row")
         producto_id = self.tableWidget.item(row, 0).text()
 
-        reply = QMessageBox.question(self, 'Eliminar Producto', 'Vas eliminar el, producto, Estas seguro?',
+        reply = QMessageBox.question(self, 'Eliminar Producto', 'Vas eliminar el producto, Estas seguro?',
                                     QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:
