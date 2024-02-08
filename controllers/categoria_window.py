@@ -48,7 +48,7 @@ class CategoriaWindow(QMainWindow):
             self.tableWidget.setCellWidget(i, 2, edit_button)
 
             delete_button = QPushButton()
-            delete_button.setIcon(QIcon("controllers/xicone-black"))  # Reemplaza "ruta_del_icono_eliminar.png" por la ruta de tu icono de eliminación
+            delete_button.setIcon(QIcon("controllers/xicone-black"))  
             delete_button.setStyleSheet("background-color: transparent; border: none;")
             delete_button.setIconSize(QSize(20, 20))
             delete_button.clicked.connect(self.delete_categoria)

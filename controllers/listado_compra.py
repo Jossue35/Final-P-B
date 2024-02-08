@@ -22,36 +22,29 @@ class ListadoCompraWindow(QMainWindow):
         label.setPixmap(pixmap)
         label.setGeometry(410, 40, 231, 141)  # Establecer las dimensiones principal
 
-        icon_path = "controllers/logopng.png"  # Reemplaza con la ruta real de tu icono
+        icon_path = "controllers/logopng.png"  
         self.setWindowIcon(QIcon(icon_path))
 
         botonCompra = self.findChild(QPushButton, 'buscar')
         botonCompra.clicked.connect(self.busqueda_compra)
 
-        # Populate the QComboBox with id_compra values
         self.populate_cbox_id()
 
     def populate_cbox_id(self):
-        # Clear existing items in the QComboBox
+       
         cbxId = self.findChild(QComboBox, 'cbxId')
         cbxId.clear()
 
-        # Get id_compra values from the model
+       
         id_compras = self._listado_compra_model.get_compra()
-
-        # Populate QComboBox with id_compra values
         for id_compra in id_compras:
-            cbxId.addItem(str(id_compra[0]))  # Assuming id_compra is the first element in the tuple
+            cbxId.addItem(str(id_compra[0]))  
 
     def busqueda_compra(self):
-        # Retrieve selected id_compra from QComboBox
         cbxId = self.findChild(QComboBox, 'cbxId')
-        selected_compra_id = cbxId.currentText()  # Use a different variable name
-
-        # Clear existing items in the table
+        selected_compra_id = cbxId.currentText() 
         self.tblcompra.setRowCount(0)
 
-        # Check if compra is not None before populating the table
         if selected_compra_id:
             compra = self._listado_compra_model.get_compra_details(selected_compra_id)
             print(selected_compra_id)

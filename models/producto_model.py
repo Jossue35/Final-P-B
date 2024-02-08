@@ -7,10 +7,9 @@ class ProductoModel:
         self._cur  = db.cursor
 
     def get_producto(self):
-        query = "SELECT p.id_producto, p.nombre_producto,  c.nombre_categoria, p.precio, p.cantidad \
-                FROM producto p \
-                INNER JOIN producto_categoria pc ON p.id_producto = pc.id_producto_fk \
-                INNER JOIN categoria c ON pc.id_categoria_fk = c.id_categoria;"
+        query = """SELECT p.id_producto, p.nombre_producto, c.nombre_categoria, p.precio, p.cantidad
+                FROM producto p
+                INNER JOIN categoria c ON p.id_categoria2 = c.id_categoria;"""
         self._cur.execute(query)
         return self._cur.fetchall()
     

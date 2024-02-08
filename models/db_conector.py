@@ -8,7 +8,7 @@ class DatabaseConnection:
             cls._instance = super(DatabaseConnection, cls).__new__(cls)
 
             try:
-                cls._instance._conn = psycopg2.connect("dbname =final user=postgres password=1234 host=localhost")
+                cls._instance._conn = psycopg2.connect("dbname =proyectofinal_grupo4 user=postgres password=123456 host=localhost")
                 cls._instance._cur = cls._instance._conn.cursor()
             
             except Exception as e:
