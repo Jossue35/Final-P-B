@@ -5,6 +5,7 @@ import pathlib
 from models.cliente_model import ClienteModel
 from controllers.cliente_form import ClienteForm
 from PyQt5.QtGui import  QPixmap, QIcon
+from models.db_conector import DatabaseConnection
 
 class ClienteWindow(QMainWindow):
     def __init__(self):
@@ -88,5 +89,6 @@ class ClienteWindow(QMainWindow):
         self._new_cliente.show()
 
     def closeEvent(self, ev) -> None:
-        self._cliente_model.close()
+        db = DatabaseConnection()
+        db.close()
         return super().closeEvent(ev)

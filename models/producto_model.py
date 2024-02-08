@@ -51,5 +51,4 @@ class ProductoModel:
         
     def close(self):
         self._cur.close()
-        self._conn.commit()
         self._conn.close()

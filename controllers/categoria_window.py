@@ -5,7 +5,7 @@ import pathlib
 from models.categoria_model import CategoriaModel
 from controllers.categoria_form import CategoriaForm
 from PyQt5.QtGui import  QPixmap, QIcon
-
+from models.db_conector import DatabaseConnection
 
 class CategoriaWindow(QMainWindow):
     def __init__(self):
@@ -85,5 +85,6 @@ class CategoriaWindow(QMainWindow):
         self._new_categoria.show()
     
     def closeEvent(self, ev) -> None:
-        self._categoria_model.close()
+        db = DatabaseConnection()
+        db.close()
         return super().closeEvent(ev)

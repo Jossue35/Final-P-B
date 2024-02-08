@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>875</width>
-    <height>409</height>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>961</width>
-     <height>441</height>
+     <height>461</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -36,7 +36,7 @@
      <rect>
       <x>240</x>
       <y>20</y>
-      <width>451</width>
+      <width>491</width>
       <height>51</height>
      </rect>
     </property>
@@ -79,9 +79,9 @@ QLineEdit:focus {
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>430</x>
       <y>120</y>
-      <width>91</width>
+      <width>101</width>
       <height>18</height>
      </rect>
     </property>
@@ -164,7 +164,7 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../../../Final-P-B/views/logomc.qrc">:/cct/logopng.png</pixmap>
+     <pixmap>:/cct/logopng.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -190,7 +190,7 @@ color: black;</string>
    <widget class="QLineEdit" name="apellidoTextField">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>120</x>
       <y>170</y>
       <width>241</width>
       <height>31</height>
@@ -280,7 +280,7 @@ color: black;</string>
    <widget class="QLineEdit" name="telefonoTextField">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>120</x>
       <y>240</y>
       <width>241</width>
       <height>31</height>
@@ -308,9 +308,9 @@ QLineEdit:focus {
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>420</x>
       <y>250</y>
-      <width>111</width>
+      <width>121</width>
       <height>18</height>
      </rect>
     </property>
@@ -370,7 +370,7 @@ color: black;</string>
    <widget class="QLineEdit" name="cedulaTextField">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>120</x>
       <y>110</y>
       <width>241</width>
       <height>31</height>

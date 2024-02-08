@@ -37,7 +37,7 @@
       <rect>
        <x>170</x>
        <y>280</y>
-       <width>631</width>
+       <width>621</width>
        <height>391</height>
       </rect>
      </property>
@@ -88,7 +88,7 @@ QTableWidget:item:selected {
      </column>
      <column>
       <property name="text">
-       <string>precio total</string>
+       <string>Precio total</string>
       </property>
       <property name="font">
        <font>
@@ -113,7 +113,7 @@ QTableWidget:item:selected {
      </column>
      <column>
       <property name="text">
-       <string>precio total producto</string>
+       <string>TxP</string>
       </property>
       <property name="font">
        <font>

@@ -171,9 +171,9 @@ font: 77 12pt &quot;Arial Black&quot;;
        <widget class="QPushButton" name="pushButton_5">
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>190</x>
           <y>240</y>
-          <width>221</width>
+          <width>251</width>
           <height>71</height>
          </rect>
         </property>
@@ -185,9 +185,9 @@ font: 77 12pt &quot;Arial Black&quot;;
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>340</x>
+         <x>320</x>
          <y>190</y>
-         <width>161</width>
+         <width>211</width>
          <height>41</height>
         </rect>
        </property>

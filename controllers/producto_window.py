@@ -5,6 +5,7 @@ import pathlib
 from models.producto_model import ProductoModel
 from controllers.producto_form import ProductoForm
 from PyQt5.QtGui import  QPixmap, QIcon
+from models.db_conector import DatabaseConnection
 
 class ProductoWindow(QMainWindow):
     def __init__(self):
@@ -86,5 +87,6 @@ class ProductoWindow(QMainWindow):
         self._new_producto.show()
 
     def closeEvent(self, ev) -> None:
-        self._producto_model.close()
+        db = DatabaseConnection()
+        db.close()        
         return super().closeEvent(ev)

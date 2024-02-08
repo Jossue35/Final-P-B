@@ -25,7 +25,7 @@ class ProductoForm(QWidget):
         label.setPixmap(pixmap)
         label.setGeometry(450, 245, 81, 41)  # Establecer las dimensiones principal
 
-        icon_path = "controllers/logopng.png"  # Reemplaza con la ruta real de tu icono
+        icon_path = "controllers/logopng.png" 
         self.setWindowIcon(QIcon(icon_path))
 
     def save_producto(self):

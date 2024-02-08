@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QMainWindow, QLabel
 from PyQt5 import uic
 import pathlib
 from PyQt5.QtGui import QPixmap, QIcon
+from models.db_conector import DatabaseConnection
 
 
 from controllers.cliente_window import ClienteWindow
@@ -63,8 +64,9 @@ class MainWindow(QMainWindow):
         self.compra_window.load_usuarios()
         self.compra_window.load_productos()
         self.compra_window.show()
-        self.hide()
+        self.close()
 
     def abrir_ventana_listado(self):
         self.listado_compra_window .show()
-        self.hide()
+        self.close()
+

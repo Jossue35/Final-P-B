@@ -109,3 +109,5 @@ class ComprasWindow(QDialog):
             unidades_lineedit.setValidator(QDoubleValidator())
 
             table_widget.setCellWidget(row_position, 4, unidades_lineedit)
+
+        

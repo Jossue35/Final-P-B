@@ -29,8 +29,8 @@ class ClienteModel:
         
     def update_cliente(self, id_usuario,  cedula, nombre_usuario, apellido, correo, telefono, direccion):
         try:
-            query = "UDPATE usuario SET cedula=%s, nombre_usuario=%s, apellido=%s, correo=%s, telefono=%s, direccion=%s"
-            self._cur.execute(query,(cedula, nombre_usuario, apellido, correo, telefono, direccion, id_usuario))
+            query = "UPDATE usuario SET cedula=%s, nombre_usuario=%s, apellido=%s, correo=%s, telefono=%s, direccion=%s WHERE id_usuario=%s"
+            self._cur.execute(query, (cedula, nombre_usuario, apellido, correo, telefono, direccion, id_usuario))
             self._conn.commit()
             return True
         except Exception as e:
@@ -49,5 +49,6 @@ class ClienteModel:
         
     def close(self):
         self._cur.close()
-        self._conn.commit()
         self._conn.close()
+
+        

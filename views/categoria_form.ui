@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>506</width>
+    <width>617</width>
     <height>291</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>-10</x>
      <y>-10</y>
-     <width>531</width>
+     <width>641</width>
      <height>321</height>
     </rect>
    </property>
@@ -36,7 +36,7 @@
      <rect>
       <x>30</x>
       <y>40</y>
-      <width>451</width>
+      <width>541</width>
       <height>51</height>
      </rect>
     </property>
@@ -51,7 +51,7 @@ color: black;</string>
    <widget class="QLineEdit" name="nombreCategoriaTextField">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>260</x>
       <y>150</y>
       <width>241</width>
       <height>31</height>
@@ -81,7 +81,7 @@ QLineEdit:focus {
      <rect>
       <x>50</x>
       <y>160</y>
-      <width>131</width>
+      <width>171</width>
       <height>18</height>
      </rect>
     </property>

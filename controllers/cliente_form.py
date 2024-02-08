@@ -25,7 +25,7 @@ class ClienteForm(QWidget):
         label.setPixmap(pixmap)
         label.setGeometry(790, 360, 81, 41)  # Establecer las dimensiones principal
 
-        icon_path = "controllers/logopng.png"  # Reemplaza con la ruta real de tu icono
+        icon_path = "controllers/logopng.png"  
         self.setWindowIcon(QIcon(icon_path))
 
     def save_cliente(self):
@@ -55,16 +55,16 @@ class ClienteForm(QWidget):
         self.cliente_id = cliente_id
         cliente_data = self._clienteHandler.get_cliente_by_id(cliente_id)
         if cliente_data:
-                self.cedulaTextField.setText((cliente_data[1])),
+                self.cedulaTextField.setText(str(cliente_data[1])),
                 self.nombreTextField.setText(cliente_data[2]),
                 self.apellidoTextField.setText(cliente_data[3]),
                 self.correoTextField.setText(cliente_data[4]),
                 self.telefonoTextField.setText(str(cliente_data[5])),
                 self.direccionTextField.setText(cliente_data[6])
     def reset_form(self):
-        self.cedulaTextField.setText(""),
-        self.nombreTextField.setText(""),
-        self.apellidoTextField.setText(""),
-        self.correoTextField.setText(""),
-        self.telefonoTextField.setText(""),
+        self.cedulaTextField.setText("")
+        self.nombreTextField.setText("")
+        self.apellidoTextField.setText("")
+        self.correoTextField.setText("")
+        self.telefonoTextField.setText("")
         self.direccionTextField.setText("")
