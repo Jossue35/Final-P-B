@@ -9,6 +9,7 @@ from controllers.cliente_window import ClienteWindow
 from controllers.categoria_window import CategoriaWindow
 from controllers.producto_window import ProductoWindow
 from controllers.compras_window import ComprasWindow
+from controllers.listado_compra import ListadoCompraWindow
 
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
@@ -39,6 +40,9 @@ class MainWindow(QMainWindow):
         self.compra_window = ComprasWindow()
         self.pushButton_4.clicked.connect(self.abrir_ventana_compras)
 
+        self.listado_compra_window = ListadoCompraWindow()
+        self.pushButton_5.clicked.connect(self.abrir_ventana_listado)
+
 
     def abrir_ventana_categoria(self):
         self.categoria_window.load_categoria()
@@ -59,4 +63,8 @@ class MainWindow(QMainWindow):
         self.compra_window.load_usuarios()
         self.compra_window.load_productos()
         self.compra_window.show()
+        self.hide()
+
+    def abrir_ventana_listado(self):
+        self.listado_compra_window .show()
         self.hide()
